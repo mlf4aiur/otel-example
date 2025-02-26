@@ -1,0 +1,28 @@
+{
+  "name": "otel-example",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+  "features":
+  {
+    "ghcr.io/devcontainers-contrib/features/black:1":
+    {},
+    "ghcr.io/devcontainers-contrib/features/coverage-py:1":
+    {}
+  },
+  "forwardPorts":
+  [
+    8000,
+    5000,
+    4317,
+    4318,
+    8889,
+    9090,
+    16686,
+    14250,
+    14268,
+    3100,
+    3000
+  ],
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh"
+}
